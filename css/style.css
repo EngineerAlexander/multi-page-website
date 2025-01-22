@@ -1,0 +1,436 @@
+/* style.css */
+
+/* General Body Settings */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Main Section Styling */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place it behind all content */
+    opacity: 0.7; /* Slightly transparent for dark theme */
+}
+
+/* Profile Photo */
+.profile-photo-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.profile-photo {
+    width: 600px;
+    height: auto;
+    border-radius: 50%; /* Circular photo */
+    border: 4px solid #bb86fc; /* Accent color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Make the photo black and white on hover */
+.profile-photo:hover {
+    filter: grayscale(100%); /* Apply black-and-white effect */
+    transform: scale(1.05); /* Optional: Slight zoom on hover */
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    color: #e0e0e0; /* Light text for dark theme */
+    padding: 2rem;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1.25rem;
+}
+
+/* Blog Posts Section */
+.blog-posts .blog-post {
+    border-bottom: 1px solid #333;
+    padding: 1rem 0;
+}
+
+.blog-post h2 {
+    font-size: 1.5rem;
+}
+
+.blog-post .post-date {
+    font-size: 0.875rem;
+    color: #bbb;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #bb86fc;
+    font-weight: bold;
+}
+
+/* Left-align the introductory paragraph */
+#intro-paragraph {
+    text-align: left; /* Ensures left alignment */
+    margin: 0 auto; /* Centers the block if the width is limited */
+    max-width: 600px; /* Optional: Limit width for better readability */
+    font-size: 1.25rem; /* Adjust font size for better visuals */
+    line-height: 1.5; /* Line height for readability */
+    white-space: pre-wrap; /* Preserve spaces to avoid words collapsing */
+}
+
+/* Cursor styling */
+#intro-paragraph span {
+    font-weight: bold;
+    color: #e0e0e0; /* Match the text color */
+    animation: blink 0.8s steps(2, start) infinite; /* Blinking animation */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Grid Layout for Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Spacing between grid items */
+    padding: 2rem;
+}
+
+/* Individual Project Container */
+.project {
+    background-color: #1e1e1e; /* Matches dark theme */
+    color: #e0e0e0; /* Light text */
+    padding: 1rem;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Project Hover Effect */
+.project:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensify shadow */
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Project Title */
+.project-title {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+/* Project Description */
+.project-description {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+/* Project Link */
+.project-link {
+    margin-top: auto; /* Push link to bottom */
+    color: #bb86fc; /* Accent color */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #e0e0e0; /* Lighten color on hover */
+}
+
+/* Resume Header */
+.resume-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Section Headings */
+main h2 {
+    margin-top: 2rem;
+    color: #bb86fc; /* Accent color */
+    text-align: center;
+}
+
+/* Education Section */
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.education-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Skills Section */
+.skills {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+/* Skill Item */
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-item p {
+    margin: 0 0 0.5rem;
+    color: #e0e0e0; /* Light text for dark theme */
+    font-size: 1rem;
+}
+
+/* Skill Bar */
+.skill-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #333; /* Dark background for the bar */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Skill Fill */
+.skill-fill {
+    height: 100%;
+    background-color: rgba(187, 134, 252, 0.8); /* Slightly transparent accent color */
+    border-radius: 10px 0 0 10px; /* Rounded corners for the fill */
+    transition: width 1s ease; /* Smooth fill animation */
+    width: 0; /* Start at 0 for animation */
+}
+
+/* Shared styles for job and education-item */
+.job, .education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #1e1e1e; /* Match the dark theme */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animations */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover effect for job and education-item */
+.job:hover, .education-item:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Intensify shadow */
+}
+
+/* Image styles for job and education-item */
+.job-image, .education-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: filter 0.3s ease; /* Smooth black-and-white effect */
+}
+
+/* Hover effect for images in job and education-item */
+.job:hover .job-image, .education-item:hover .education-image {
+    filter: grayscale(100%); /* Turn black and white on hover */
+}
+
+/* Ensure bullet points are visible in job sections */
+.job ul {
+    list-style-type: disc; /* Use disc-style bullet points */
+    margin-left: 1.5rem; /* Add left margin for proper indentation */
+    padding-left: 0; /* Remove additional padding if any */
+    color: #e0e0e0; /* Match the text color for dark theme */
+}
+
+.job ul li {
+    margin-bottom: 0.5rem; /* Add spacing between bullet points */
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Job Section */
+.job {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #1e1e1e; /* Match the dark theme */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animations */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover effect for job entries */
+.job:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Intensify shadow */
+}
+
+/* Job Image */
+.job-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: filter 0.3s ease; /* Smooth black-and-white effect */
+}
+
+/* Hover effect for job images */
+.job:hover .job-image {
+    filter: grayscale(100%); /* Turn black and white on hover */
+}
+
+/* Animation Keyframes */
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-level);
+    }
+}
+
+/* Work History Section */
+.job {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.job-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #1e1e1e; /* Matches the dark theme */
+    color: #e0e0e0; /* Light text color */
+    padding: 1rem 0;
+    font-size: 0.875rem; /* Slightly smaller font for footer text */
+    margin-top: 2rem; /* Add spacing above the footer */
+    border-top: 1px solid #333; /* Optional: Adds a subtle top border for separation */
+}
+
+/* Footer icons */
+.footer-icons {
+    margin-bottom: 0.5rem; /* Add spacing below the icons */
+}
+
+.footer-icons a {
+    text-decoration: none; /* Remove underline from anchor links */
+    display: inline-block; /* Ensures icons behave as block elements */
+}
+
+/* Footer icon styles */
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px; /* Space between icons */
+    filter: brightness(0) invert(1); /* Invert icons for dark theme */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth scaling and color changes */
+}
+
+.footer-icon:hover {
+    transform: scale(1.4); /* Slight zoom on hover */
+    filter: brightness(1); /* Brightens the icon on hover */
+}
+
+/* Footer text */
+footer p {
+    margin: 0.5rem 0; /* Add vertical spacing between lines */
+    color: #e0e0e0; /* Ensure text matches the theme */
+}
+
+/* Remove focus outlines for accessibility (optional) */
+.footer-icons a:focus {
+    outline: none; /* Removes the default focus outline */
+}
+
+/* Header navigation links */
+.navbar a {
+    text-decoration: none; /* Remove default underline */
+    color: #e0e0e0; /* Light text color for dark theme */
+    font-size: 1rem; /* Base font size */
+    transition: transform 0.3s ease, text-decoration-color 0.3s ease; /* Smooth scale and underline color changes */
+    text-decoration-color: transparent; /* Underline starts hidden */
+    display: inline-block; /* Ensures transform applies cleanly */
+}
+
+/* Style for the active page link */
+.navbar a.active {
+    transform: scale(1.3); /* Match the hover size */
+}
+
+/* Hover effect for navigation links */
+.navbar a:hover {
+    transform: scale(1.3); /* Scale text up by 20% */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .blog-post h2 {
+        font-size: 1.25rem;
+    }
+}

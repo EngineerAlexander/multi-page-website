@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="resume-header">
+            <p>Download my <a href="assets/resume.pdf" download>resume</a></p>
+        </section>
+
+        <section class="resume-headshot">
+            <div class="profile-photo-container">
+                <img src="images/professional-headshot.jpg" alt="Bijan Ardalan" class="profile-photo">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skill-item">
+                <p>HTML</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--skill-level: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>CSS</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--skill-level: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>JavaScript</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--skill-level: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Python</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--skill-level: 75%;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <img src="images/university.jpg" alt="University" class="education-image">
+                <div class="education-details">
+                    <h3>BS Mechanical Engineering</h3>
+                    <p><strong>University:</strong> UC San Diego</p>
+                    <p><strong>GPA:</strong> 4.0</p>
+                    <p><strong>Dates:</strong> September 2017 - June 2020</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work History Section -->
+        <section class="work-history">
+            <h2>Work History</h2>
+            <div class="job">
+                <img src="images/job1.jpg" alt="Job 1" class="job-image">
+                <div class="job-details">
+                    <h3>Aerospace Engineer</h3>
+                    <p><strong>Company:</strong> Your Previous Company</p>
+                    <p><strong>Dates:</strong> 2018–2023</p>
+                    <ul>
+                        <li>Designed and optimized aerospace systems for commercial aircraft.</li>
+                        <li>Led a team of engineers on key projects, delivering on-time solutions.</li>
+                        <li>Conducted detailed performance analyses using simulation tools.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <img src="images/job2.jpg" alt="Job 2" class="job-image">
+                <div class="job-details">
+                    <h3>Intern</h3>
+                    <p><strong>Company:</strong> Space Exploration Technologies</p>
+                    <p><strong>Dates:</strong> 2017–2018</p>
+                    <ul>
+                        <li>Contributed to spacecraft component testing and validation.</li>
+                        <li>Collaborated on design reviews for propulsion systems.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <img src="images/job3.jpg" alt="Job 3" class="job-image">
+                <div class="job-details">
+                    <h3>Intern</h3>
+                    <p><strong>Company:</strong> Space Exploration Technologies</p>
+                    <p><strong>Dates:</strong> 2017–2018</p>
+                    <ul>
+                        <li>Contributed to spacecraft component testing and validation.</li>
+                        <li>Collaborated on design reviews for propulsion systems.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <img src="images/job4.jpg" alt="Job 4" class="job-image">
+                <div class="job-details">
+                    <h3>Student Researcher, Computer Vision</h3>
+                    <p><strong>Company:</strong> UCSD Medically Advanced Devices Laboratory</p>
+                    <p><strong>Dates:</strong> July 2019 - August 2019</p>
+                    <ul>
+                        <li>Created Java, ImageJ, MATLAB pipeline to automatically analyze 1000's of high-speed fluid droplet ejection videos for research.</li>
+                        <li>Collaborated on design reviews for propulsion systems.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/alexander-bijan-ardalan/" target="_blank">
+                <img src="images/linkedin-icon.png" alt="LinkedIn" class="footer-icon">
+            </a>
+            <a href="https://github.com/EngineerAlexander" target="_blank">
+                <img src="images/github-icon.png" alt="GitHub" class="footer-icon">
+            </a>
+        </div>
+        <p>Designed by Bijan in California</p>
+        <p id="footer-year">Copyright <span id="dynamic-year"></span></p>
+    </footer>
+
+    <script src="js/utils.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
