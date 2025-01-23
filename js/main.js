@@ -68,6 +68,67 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Function to handle intersection and trigger the slide-in animation
+function observePanels() {
+    const panels = document.querySelectorAll('.job, .education-item, .project'); // Include .project elements
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        threshold: 0.1, // Trigger when 10% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add visible class when in view
+                observer.unobserve(entry.target); // Stop observing once it's animated
+            }
+        });
+    }, observerOptions);
+
+    panels.forEach(panel => observer.observe(panel));
+}
+
+// Run the observer function when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    observePanels();
+});
+
+// Function to animate items as they enter the viewport
+function observeAboutItems() {
+    const aboutItems = document.querySelectorAll('.about-item');
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        threshold: 0.1, // Trigger when 10% of the item is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add visible class
+                observer.unobserve(entry.target); // Stop observing once visible
+            }
+        });
+    }, observerOptions);
+
+    aboutItems.forEach(item => observer.observe(item));
+}
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', observeAboutItems);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const projectCards = document.querySelectorAll('.project');
+
+    projectCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const link = card.getAttribute('data-link');
+            if (link) {
+                window.open(link, '_blank'); // Open the link in a new tab
+            }
+        });
+    });
+});
+
 // Update the footer year dynamically
 const dynamicYear = document.getElementById('dynamic-year');
 if (dynamicYear) {

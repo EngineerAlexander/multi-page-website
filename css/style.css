@@ -1,12 +1,16 @@
 /* style.css */
 
-/* General Body Settings */
+/* Body background styling */
 body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background: linear-gradient(to top, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 1) 60%), 
+                url('../images/mountains-at-night.jpg') no-repeat center top;
+    background-size: cover; /* Ensure the image covers the full width */
+    background-attachment: fixed; /* Make the background stay in place while scrolling */
 }
 
 /* Main Section Styling */
@@ -72,28 +76,6 @@ main {
     font-size: 1.25rem;
 }
 
-/* Blog Posts Section */
-.blog-posts .blog-post {
-    border-bottom: 1px solid #333;
-    padding: 1rem 0;
-}
-
-.blog-post h2 {
-    font-size: 1.5rem;
-}
-
-.blog-post .post-date {
-    font-size: 0.875rem;
-    color: #bbb;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #bb86fc;
-    font-weight: bold;
-}
-
 /* Left-align the introductory paragraph */
 #intro-paragraph {
     text-align: left; /* Ensures left alignment */
@@ -115,6 +97,64 @@ main {
     50% {
         opacity: 0;
     }
+}
+
+/* About Section */
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #bb86fc; /* Accent color */
+}
+
+/* About Section Headers */
+.about h1, .about-item p {
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.about h1:hover, .about-item p:hover {
+    color: #ffffff; /* Change text to white on hover */
+}
+
+/* General Animation for Text and Images */
+.about-item {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Slide in from below */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
+    margin-bottom: 2rem;
+}
+
+.about-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Reset position when visible */
+}
+
+/* About Text */
+.about-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* About Image */
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;  /* Smooth scaling, shadow, and filter transition */
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Enlarge image slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Intensify shadow */
+    filter: grayscale(100%); /* Apply grayscale effect */
 }
 
 /* Grid Layout for Projects */
@@ -140,18 +180,44 @@ main {
     text-align: center;
 }
 
+/* Project Entry - Slide-in Effect */
+
+/* Initial state for sliding animation */
+.project {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start slightly off-screen to the left */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
+}
+
+/* Visible state when the element is in view */
+.project.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide to original position */
+}
+
 /* Project Hover Effect */
 .project:hover {
     transform: scale(1.05); /* Increase size on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensify shadow */
 }
 
-/* Project Image */
+/* Existing Hover Effect - Project Image */
 .project-image {
     width: 100%;
     height: auto;
     border-radius: 4px;
     margin-bottom: 1rem;
+    transition: filter 0.3s ease, transform 0.3s ease; /* Add filter transition for smooth black-and-white effect */
+}
+
+/* Hover effect for project images */
+.project:hover .project-image {
+    filter: grayscale(100%); /* Turn black and white on hover */
+}
+
+.project:hover .project-link {
+    color: #e0e0e0; /* Change color on hover */
+    text-decoration: underline; /* Optional: Add underline effect */
 }
 
 /* Project Title */
@@ -174,10 +240,6 @@ main {
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.project-link:hover {
-    color: #e0e0e0; /* Lighten color on hover */
 }
 
 /* Resume Header */
@@ -253,8 +315,16 @@ main h2 {
     padding: 1rem;
     background-color: #1e1e1e; /* Match the dark theme */
     border-radius: 8px; /* Rounded corners for a polished look */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animations */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Adjust duration here */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Positioned slightly off-screen to the left */
+}
+
+/* Visible state when the element is in view */
+.job.visible, .education-item.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide to original position */
 }
 
 /* Hover effect for job and education-item */

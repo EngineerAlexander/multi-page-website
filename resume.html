@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="icon" href="images/favicon1.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Journey</a></li>
                 <li><a href="resume.html" class="active">Resume</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="https://www.linkedin.com/in/alexander-bijan-ardalan/" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="resume-header">
-            <p>Download my <a href="assets/resume.pdf" download>resume</a></p>
+            <p>Download my <a href="assets/alexander_bijan_ardalan_resume.pdf" download>resume</a></p>
         </section>
 
         <section class="resume-headshot">
@@ -35,27 +37,33 @@
         <section class="skills">
             <h2>Skills</h2>
             <div class="skill-item">
-                <p>HTML</p>
+                <p>Python</p>
                 <div class="skill-bar">
                     <div class="skill-fill" style="--skill-level: 90%;"></div>
                 </div>
             </div>
             <div class="skill-item">
-                <p>CSS</p>
+                <p>C/C++</p>
                 <div class="skill-bar">
                     <div class="skill-fill" style="--skill-level: 85%;"></div>
                 </div>
             </div>
             <div class="skill-item">
-                <p>JavaScript</p>
+                <p>CSH/KSH/Bash/ZSH</p>
                 <div class="skill-bar">
-                    <div class="skill-fill" style="--skill-level: 80%;"></div>
+                    <div class="skill-fill" style="--skill-level: 82%;"></div>
                 </div>
             </div>
             <div class="skill-item">
-                <p>Python</p>
+                <p>Perl</p>
                 <div class="skill-bar">
-                    <div class="skill-fill" style="--skill-level: 75%;"></div>
+                    <div class="skill-fill" style="--skill-level: 81%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Agile</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--skill-level: 80%;"></div>
                 </div>
             </div>
         </section>
@@ -64,68 +72,87 @@
         <section class="education">
             <h2>Education</h2>
             <div class="education-item">
-                <img src="images/university.jpg" alt="University" class="education-image">
+                <img src="images/ucsd-seal.png" alt="UC San Diego Library" class="education-image">
                 <div class="education-details">
-                    <h3>BS Mechanical Engineering</h3>
+                    <h3>Bachelor's of Science, Mechanical Engineering</h3>
                     <p><strong>University:</strong> UC San Diego</p>
-                    <p><strong>GPA:</strong> 4.0</p>
+                    <p><strong>GPA:</strong> 4.0, First-in-class</p>
                     <p><strong>Dates:</strong> September 2017 - June 2020</p>
                 </div>
             </div>
         </section>
 
         <!-- Work History Section -->
+        <h2>Work History</h2>
         <section class="work-history">
-            <h2>Work History</h2>
             <div class="job">
-                <img src="images/job1.jpg" alt="Job 1" class="job-image">
+                <img src="images/boeing-logo.png" alt="Job 2" class="job-image">
                 <div class="job-details">
-                    <h3>Aerospace Engineer</h3>
-                    <p><strong>Company:</strong> Your Previous Company</p>
-                    <p><strong>Dates:</strong> 2018–2023</p>
+                    <h3>Embedded Software Engineer</h3>
+                    <p><strong>Company:</strong> The Boeing company</p>
+                    <p><strong>Dates:</strong> April 2022 - Present</p>
                     <ul>
-                        <li>Designed and optimized aerospace systems for commercial aircraft.</li>
-                        <li>Led a team of engineers on key projects, delivering on-time solutions.</li>
-                        <li>Conducted detailed performance analyses using simulation tools.</li>
+                        <li>Developed a Python application to auto-generate ~1000 telemetry files monthly for C++ codebase, saving 2 hours of work per testing task and 7 days of work before major releases. Added features to detect and flag inconsistencies in database vs flight software code.</li>
+                        <li>Responsible engineer for design and implementation of Telemetry, Time, Command, and MIB-sync modules in C/C++ codebase.</li>
+                        <li>In charge of development (C++) and testing (TCL/Linux) of security-related features in flight software application layer.</li>
+                        <li>Devised a real-time, configurable non-breakpoint debugging feature for FPGA communication, facilitating timely bug identification.</li>
+                        <li>Created/managed dedicated software tool repository for team including hexadecimal packet parsing app, Perl binary parsers, Python scripts to batch analyze data or quickly generate config files, monolith Linux build scripts calling Java/Python/C++.</li>
+                        <li>Streamlined developer workflow by heavily refactoring repositories and introducing CSH scripts for quick configuration changes.</li>
+                        <li>Configured and managed lighttpd web servers, SNMP, and Linux processes for team members, ensuring a smooth dev environment.</li>
+                        <li>Object-oriented TCL testing repository, reducing test code by 50% and enhancing overall test efficiency and developer productivity.</li>
+                        <li>Mentored 5 engineers on program's embedded architecture as needed, aiding in their story execution, and resolving blocking issues.</li>
+                        <li>Team expert on configuring software and using builds given task/hardware availability. Wrote build scripts for monolith/dynamic download, software uplink, and kernel. Experience loading into flash vs ram, imitating/bypassing hardware with TCP dev builds.</li>
+                        <li>Identified and resolved critical bugs in Time, Command, FPGA, Threading, and Spacewire services w/ GreenHills Multi, TCL, etc.</li>
+                        <li>Wrote High-Level-Device-Driver (HLDD) for propulsion system of new communication satellite utilizing CANOpen protocol.</li>
+                        <li>Facilitated transfer of software deliverables between Millenium Space Systems and Boeing, working on both teams simultaneously.</li>
+                        <li>Conducted all work with agile best practices using Git/Linux/Jira/BitBucket/Confluence in a story-based sprint system.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="job">
-                <img src="images/job2.jpg" alt="Job 2" class="job-image">
+                <img src="images/northrop-grumman-logo.png" alt="Job 3" class="job-image">
                 <div class="job-details">
-                    <h3>Intern</h3>
-                    <p><strong>Company:</strong> Space Exploration Technologies</p>
-                    <p><strong>Dates:</strong> 2017–2018</p>
+                    <h3>Simulation Software Engineer</h3>
+                    <p><strong>Company:</strong> Northrop Grumman Corp.</p>
+                    <p><strong>Dates:</strong> September 2020 - April 2022</p>
+                    <p><strong><em>NASA James Webb Space Telescope</em></strong></p>
                     <ul>
-                        <li>Contributed to spacecraft component testing and validation.</li>
-                        <li>Collaborated on design reviews for propulsion systems.</li>
+                        <li>Wrote MATLAB class-based toolkits to read-in/standardize NASTRAN mass and inertial tensor data and deployment analysis.</li>
+                        <li>Proposed, developed, and continually updated a RedHat Linux supercomputing cluster guide for dynamics-related workflows.</li>
+                        <li>Conducted NASA task order on solar array deployment anomaly contingency planning and gave tech talk to 50+ engineers.</li>
+                    </ul>
+                    <p><strong><em>Various Programs</em></strong></p>
+                    <ul>
+                        <li>Developed KSH shell scripting for NASTRAN/MATLAB processes to automate 100’s of loads analysis simulation runs.</li>
+                        <li>Modernized a 15-year-old analysis process using internal PhD research papers to develop MATLAB class for low-level vibration characterization. Involved ~300 GB data management, signal processing, noise removal, filtering, transformation, and verification.</li>
+                        <li>Traveled to customer facilities representing company as a specialist to facilitate accurate data collection during satellite transport.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="job">
-                <img src="images/job3.jpg" alt="Job 3" class="job-image">
+                <img src="images/hp-logo.png" alt="Job 2" class="job-image">
                 <div class="job-details">
-                    <h3>Intern</h3>
-                    <p><strong>Company:</strong> Space Exploration Technologies</p>
-                    <p><strong>Dates:</strong> 2017–2018</p>
+                    <h3>Computer Vision Software Engineer Intern</h3>
+                    <p><strong>Company:</strong> HP Inc.</p>
+                    <p><strong>Dates:</strong> June 2020 - September 2020</p>
                     <ul>
-                        <li>Contributed to spacecraft component testing and validation.</li>
-                        <li>Collaborated on design reviews for propulsion systems.</li>
+                        <li>Developed/validated an automated Java/Python pipeline to analyze microfluidic R&D videos ~100x quicker with improved accuracy.</li>
+                        <li>Packaged Python code into an HP proprietary tool class allowing for easy adaptation and advanced visualization for future engineers.</li>
+                        <li>Wrote an interactive Python tutorial and documentation for the package. Left with codebase running in-lab on microfluidic datasets.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="job">
-                <img src="images/job4.jpg" alt="Job 4" class="job-image">
+                <img src="images/ucsd-seal.png" alt="Job 1" class="job-image">
                 <div class="job-details">
                     <h3>Student Researcher, Computer Vision</h3>
                     <p><strong>Company:</strong> UCSD Medically Advanced Devices Laboratory</p>
                     <p><strong>Dates:</strong> July 2019 - August 2019</p>
                     <ul>
-                        <li>Created Java, ImageJ, MATLAB pipeline to automatically analyze 1000's of high-speed fluid droplet ejection videos for research.</li>
-                        <li>Collaborated on design reviews for propulsion systems.</li>
+                        <li>Created Java, ImageJ, MATLAB pipeline to automatically analyze 1000’s of high-speed fluid droplet ejection videos for research.</li>
                     </ul>
                 </div>
             </div>
@@ -139,6 +166,9 @@
             </a>
             <a href="https://github.com/EngineerAlexander" target="_blank">
                 <img src="images/github-icon.png" alt="GitHub" class="footer-icon">
+            </a>
+            <a href="https://www.strava.com/athletes/132559144" target="_blank">
+                <img src="images/strava-icon.png" alt="Strava" class="footer-icon">
             </a>
         </div>
         <p>Designed by Bijan in California</p>

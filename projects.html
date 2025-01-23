@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="icon" href="images/favicon1.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Journey</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="https://www.linkedin.com/in/alexander-bijan-ardalan/" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -23,33 +25,28 @@
     <main>
         <!-- Projects Grid -->
         <section class="projects-grid">
-            <div class="project">
-                <img src="images/project1.jpg" alt="Project 1" class="project-image">
-                <h2 class="project-title">Portfolio Website</h2>
-                <p class="project-description">A sleek portfolio website showcasing my resume, projects, and blog. Built with HTML, CSS, and JavaScript.</p>
-                <a href="https://github.com/yourusername/portfolio-website" target="_blank" class="project-link">View on GitHub</a>
+            <div class="project" data-link="https://github.com/EngineerAlexander/personal-website">
+                <img src="images/project-website-thumbnail.png" alt="Personal Website" class="project-image">
+                <h2 class="project-title">Personal Website</h2>
+                <p class="project-description">A sleek portfolio website showcasing my journey, resume, and projects. Built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/yourusername/portfolio-website" target="_blank" class="project-link">View More</a>
             </div>
 
-            <div class="project">
-                <img src="images/project2.jpg" alt="Project 2" class="project-image">
-                <h2 class="project-title">Weather App</h2>
-                <p class="project-description">An interactive weather app fetching real-time data using the OpenWeather API. Built with React and Tailwind CSS.</p>
-                <a href="https://github.com/yourusername/weather-app" target="_blank" class="project-link">View on GitHub</a>
+            <div class="project" data-link="https://github.com/yourusername/portfolio-website">
+                <img src="images/project-computer-vision-thumbnail.jpg" alt="CV Droplet Analysis" class="project-image">
+                <h2 class="project-title">Computer Vision Droplet Tracking</h2>
+                <p class="project-description">Documentation for the code I wrote to track and analyze ejected fluid droplets for a research paper examining a new type of 3D printer.</p>
+                <a href="https://github.com/yourusername/weather-app" target="_blank" class="project-link">View More</a>
             </div>
 
-            <div class="project">
-                <img src="images/project3.jpg" alt="Project 3" class="project-image">
-                <h2 class="project-title">Task Manager</h2>
-                <p class="project-description">A simple task manager with user authentication and a responsive UI. Built with Node.js, Express, and MongoDB.</p>
-                <a href="https://github.com/yourusername/task-manager" target="_blank" class="project-link">View on GitHub</a>
+            <div class="project" data-link="https://github.com/yourusername/portfolio-website">
+                <img src="images/project-autonomous-mail-delivery-thumbnail.jpg" alt="Autonomous Mail Delivery Robot" class="project-image">
+                <h2 class="project-title">Autonomous Mail Delivery Robot</h2>
+                <p class="project-description">Trained a self-driving car utilizing the Donkey Car framework and modified it to autonomously deliver personalized mail based on mailbox number.</p>
+                <a href="https://github.com/yourusername/task-manager" target="_blank" class="project-link">View More</a>
             </div>
-
-            <div class="project">
-                <img src="images/project4.jpg" alt="Project 4" class="project-image">
-                <h2 class="project-title">Task Manager</h2>
-                <p class="project-description">A simple task manager with user authentication and a responsive UI. Built with Node.js, Express, and MongoDB.</p>
-                <a href="https://github.com/yourusername/task-manager" target="_blank" class="project-link">View on GitHub</a>
-            </div>        </section>
+        </section>
+        <p>Link to <a href="meche-projects.html" download>mechanical engineering projects</a></p>
     </main>
 
     <footer>
@@ -59,6 +56,9 @@
             </a>
             <a href="https://github.com/EngineerAlexander" target="_blank">
                 <img src="images/github-icon.png" alt="GitHub" class="footer-icon">
+            </a>
+            <a href="https://www.strava.com/athletes/132559144" target="_blank">
+                <img src="images/strava-icon.png" alt="Strava" class="footer-icon">
             </a>
         </div>
         <p>Designed by Bijan in California</p>
