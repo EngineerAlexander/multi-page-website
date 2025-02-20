@@ -1,40 +1,96 @@
-/* style.css */
+/* Web-first development since recruiters are more likely to view your website on a desktop */
 
-/* Body background styling */
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
 body {
-    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    font-family: Arial, sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: linear-gradient(to top, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 1) 60%), 
-                url('../images/mountains-at-night.jpg') no-repeat center top;
-    background-size: cover; /* Ensure the image covers the full width */
-    background-attachment: fixed; /* Make the background stay in place while scrolling */
 }
 
-/* Main Section Styling */
 main {
     max-width: 960px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0rem 1rem;
 }
 
-/* Background Image */
-.background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: -1; /* Place it behind all content */
-    opacity: 0.7; /* Slightly transparent for dark theme */
+a {
+    color: #bb86fc; /* Purple for links */
+    text-decoration: none;
 }
 
-/* Profile Photo */
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays above the header */
+}
+
+.logo-container img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e0e0e0; /* Adjust color as needed */
+}
+
+.navbar {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, text-decoration-color 0.3s ease;
+    text-decoration-color: transparent;
+    display: inline-block;
+}
+
+.navbar a.active {
+    transform: scale(1.3);
+    border-bottom: 2px solid #bb86fc;
+}
+
+.navbar a:hover {
+    transform: scale(1.3);
+}
+
+/* ==========================================================================
+   Homepage Styles
+   ========================================================================== */
+
+/* Profile Section */
 .profile-photo-container {
     text-align: center;
     margin: 2rem 0;
@@ -43,28 +99,27 @@ main {
 .profile-photo {
     width: 600px;
     height: auto;
-    border-radius: 50%; /* Circular photo */
-    border: 4px solid #bb86fc; /* Accent color */
+    border-radius: 50%;
+    border: 4px solid #bb86fc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition for effects */
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* Make the photo black and white on hover */
 .profile-photo:hover {
-    filter: grayscale(100%); /* Apply black-and-white effect */
-    transform: scale(1.05); /* Optional: Slight zoom on hover */
+    filter: grayscale(100%);
+    transform: scale(1.05);
 }
 
 /* Intro Section */
 .intro {
     text-align: center;
-    color: #e0e0e0; /* Light text for dark theme */
-    padding: 2rem;
+    color: #e0e0e0;
 }
 
 .intro h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #bb86fc;
 }
 
 .intro h2 {
@@ -76,30 +131,29 @@ main {
     font-size: 1.25rem;
 }
 
-/* Left-align the introductory paragraph */
 #intro-paragraph {
-    text-align: left; /* Ensures left alignment */
-    margin: 0 auto; /* Centers the block if the width is limited */
-    max-width: 600px; /* Optional: Limit width for better readability */
-    font-size: 1.25rem; /* Adjust font size for better visuals */
-    line-height: 1.5; /* Line height for readability */
-    white-space: pre-wrap; /* Preserve spaces to avoid words collapsing */
+    text-align: left;
+    margin: 0 auto;
+    max-width: 900px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
 }
 
-/* Cursor styling */
+/* Typing Cursor */
 #intro-paragraph span {
     font-weight: bold;
-    color: #e0e0e0; /* Match the text color */
-    animation: blink 0.8s steps(2, start) infinite; /* Blinking animation */
+    color: #e0e0e0;
+    animation: blink 0.8s steps(2, start) infinite;
 }
 
 @keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    50% { opacity: 0; }
 }
 
-/* About Section */
+/* ==========================================================================
+   About Page Styles
+   ========================================================================== */
 .about {
     max-width: 800px;
     margin: 0 auto;
@@ -111,163 +165,192 @@ main {
 .about h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #bb86fc; /* Accent color */
+    color: #bb86fc;
 }
 
-/* About Section Headers */
 .about h1, .about-item p {
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease;
 }
 
 .about h1:hover, .about-item p:hover {
-    color: #ffffff; /* Change text to white on hover */
+    color: #ffffff;
 }
 
-/* General Animation for Text and Images */
 .about-item {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(30px); /* Slide in from below */
-    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
     margin-bottom: 2rem;
 }
 
 .about-item.visible {
     opacity: 1;
-    transform: translateY(0); /* Reset position when visible */
+    transform: translateY(0);
 }
 
-/* About Text */
 .about-text {
     font-size: 1.25rem;
     line-height: 1.6;
 }
 
-/* About Image */
 .about-image {
     width: 100%;
     max-width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;  /* Smooth scaling, shadow, and filter transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .about-image:hover {
-    transform: scale(1.05); /* Enlarge image slightly */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Intensify shadow */
-    filter: grayscale(100%); /* Apply grayscale effect */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    filter: grayscale(100%);
 }
 
-/* Grid Layout for Projects */
+/* ==========================================================================
+   Projects Page Styles
+   ========================================================================== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 1.5rem; /* Spacing between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
     padding: 2rem;
 }
 
-/* Individual Project Container */
 .project {
-    background-color: #1e1e1e; /* Matches dark theme */
-    color: #e0e0e0; /* Light text */
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     padding: 1rem;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.8s ease, transform 0.8s ease;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
 }
 
-/* Project Entry - Slide-in Effect */
-
-/* Initial state for sliding animation */
-.project {
-    opacity: 0; /* Initially hidden */
-    transform: translateX(-50px); /* Start slightly off-screen to the left */
-    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
-}
-
-/* Visible state when the element is in view */
 .project.visible {
     opacity: 1;
-    transform: translateX(0); /* Slide to original position */
+    transform: translateX(0);
 }
 
-/* Project Hover Effect */
 .project:hover {
-    transform: scale(1.05); /* Increase size on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensify shadow */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Existing Hover Effect - Project Image */
 .project-image {
     width: 100%;
     height: auto;
     border-radius: 4px;
     margin-bottom: 1rem;
-    transition: filter 0.3s ease, transform 0.3s ease; /* Add filter transition for smooth black-and-white effect */
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for project images */
 .project:hover .project-image {
-    filter: grayscale(100%); /* Turn black and white on hover */
+    filter: grayscale(100%);
 }
 
-.project:hover .project-link {
-    color: #e0e0e0; /* Change color on hover */
-    text-decoration: underline; /* Optional: Add underline effect */
-}
-
-/* Project Title */
 .project-title {
     font-size: 1.25rem;
     margin: 0.5rem 0;
 }
 
-/* Project Description */
 .project-description {
     font-size: 1rem;
     margin: 0.5rem 0;
     line-height: 1.5;
 }
 
-/* Project Link */
 .project-link {
-    margin-top: auto; /* Push link to bottom */
-    color: #bb86fc; /* Accent color */
+    margin-top: auto;
+    color: #bb86fc;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Resume Header */
+.project:hover .project-link {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+/* Back Arrow Link */
+.link-arrow-container {
+    margin: 1rem 0;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    text-align: center;
+}
+
+.link-arrow {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #bb86fc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-arrow:hover {
+    color: #ffffff;
+}
+
+.back-arrow {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* ==========================================================================
+   Project Page Styles
+   ========================================================================== */
+.project-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #e0e0e0;
+}
+
+.project-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #bb86fc;
+    transition: color 0.3s ease;
+}
+
+.project-page h1:hover {
+    color: #ffffff;
+}
+
+.project-page-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.project-page-text:hover {
+    color: #ffffff;
+}
+
+.project-page-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* ==========================================================================
+   Resume Page Styles
+   ========================================================================== */
 .resume-header {
     text-align: center;
     margin-bottom: 2rem;
-}
-
-/* Section Headings */
-main h2 {
-    margin-top: 2rem;
-    color: #bb86fc; /* Accent color */
-    text-align: center;
-}
-
-/* Education Section */
-.education-item {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.education-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-    object-fit: cover;
 }
 
 /* Skills Section */
@@ -276,231 +359,122 @@ main h2 {
     max-width: 600px;
 }
 
-/* Skill Item */
 .skill-item {
     margin-bottom: 1.5rem;
 }
 
 .skill-item p {
     margin: 0 0 0.5rem;
-    color: #e0e0e0; /* Light text for dark theme */
+    color: #e0e0e0;
     font-size: 1rem;
 }
 
-/* Skill Bar */
 .skill-bar {
     width: 100%;
     height: 20px;
-    background-color: #333; /* Dark background for the bar */
+    background-color: #333;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
 
-/* Skill Fill */
 .skill-fill {
     height: 100%;
-    background-color: rgba(187, 134, 252, 0.8); /* Slightly transparent accent color */
-    border-radius: 10px 0 0 10px; /* Rounded corners for the fill */
-    transition: width 1s ease; /* Smooth fill animation */
-    width: 0; /* Start at 0 for animation */
+    background-color: rgba(187, 134, 252, 0.8);
+    border-radius: 10px 0 0 10px;
+    transition: width 1s ease;
+    width: 0;
 }
 
-/* Shared styles for job and education-item */
+/* Education and Work Experience */
 .job, .education-item {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding: 1rem;
-    background-color: #1e1e1e; /* Match the dark theme */
-    border-radius: 8px; /* Rounded corners for a polished look */
-    transition: opacity 0.8s ease, transform 0.8s ease; /* Adjust duration here */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    opacity: 0; /* Initially hidden */
-    transform: translateX(-50px); /* Positioned slightly off-screen to the left */
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 0;
+    transform: translateX(-50px);
 }
 
-/* Visible state when the element is in view */
 .job.visible, .education-item.visible {
     opacity: 1;
-    transform: translateX(0); /* Slide to original position */
+    transform: translateX(0);
 }
 
-/* Hover effect for job and education-item */
 .job:hover, .education-item:hover {
-    transform: scale(1.05); /* Slightly increase size */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Intensify shadow */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Image styles for job and education-item */
 .job-image, .education-image {
     width: 150px;
     height: 150px;
     border-radius: 8px;
     object-fit: cover;
-    transition: filter 0.3s ease; /* Smooth black-and-white effect */
+    transition: filter 0.3s ease;
 }
 
-/* Hover effect for images in job and education-item */
 .job:hover .job-image, .education-item:hover .education-image {
-    filter: grayscale(100%); /* Turn black and white on hover */
+    filter: grayscale(100%);
 }
 
-/* Ensure bullet points are visible in job sections */
 .job ul {
-    list-style-type: disc; /* Use disc-style bullet points */
-    margin-left: 1.5rem; /* Add left margin for proper indentation */
-    padding-left: 0; /* Remove additional padding if any */
-    color: #e0e0e0; /* Match the text color for dark theme */
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    padding-left: 0;
+    color: #e0e0e0;
 }
 
 .job ul li {
-    margin-bottom: 0.5rem; /* Add spacing between bullet points */
-    font-size: 1rem; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-/* Job Section */
-.job {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #1e1e1e; /* Match the dark theme */
-    border-radius: 8px; /* Rounded corners for a polished look */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animations */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-/* Hover effect for job entries */
-.job:hover {
-    transform: scale(1.05); /* Slightly increase size */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Intensify shadow */
-}
-
-/* Job Image */
-.job-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-    object-fit: cover;
-    transition: filter 0.3s ease; /* Smooth black-and-white effect */
-}
-
-/* Hover effect for job images */
-.job:hover .job-image {
-    filter: grayscale(100%); /* Turn black and white on hover */
-}
-
-/* Animation Keyframes */
-@keyframes fillBar {
-    from {
-        width: 0;
-    }
-    to {
-        width: var(--skill-level);
-    }
-}
-
-/* Work History Section */
-.job {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.job-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-/* Footer Styles */
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
 footer {
     text-align: center;
-    background-color: #1e1e1e; /* Matches the dark theme */
-    color: #e0e0e0; /* Light text color */
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     padding: 1rem 0;
-    font-size: 0.875rem; /* Slightly smaller font for footer text */
-    margin-top: 2rem; /* Add spacing above the footer */
-    border-top: 1px solid #333; /* Optional: Adds a subtle top border for separation */
+    font-size: 0.875rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
 }
 
-/* Footer icons */
-.footer-icons {
-    margin-bottom: 0.5rem; /* Add spacing below the icons */
+footer p {
+    margin: 0.5rem 0;
+    color: #e0e0e0;
 }
 
 .footer-icons a {
-    text-decoration: none; /* Remove underline from anchor links */
-    display: inline-block; /* Ensures icons behave as block elements */
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
 }
 
-/* Footer icon styles */
+.footer-icons img {
+    width: 24px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1);
+}
+
 .footer-icon {
     width: 24px;
     height: 24px;
-    margin: 0 10px; /* Space between icons */
-    filter: brightness(0) invert(1); /* Invert icons for dark theme */
-    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth scaling and color changes */
+    margin: 0 10px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .footer-icon:hover {
-    transform: scale(1.4); /* Slight zoom on hover */
-    filter: brightness(1); /* Brightens the icon on hover */
-}
-
-/* Footer text */
-footer p {
-    margin: 0.5rem 0; /* Add vertical spacing between lines */
-    color: #e0e0e0; /* Ensure text matches the theme */
-}
-
-/* Remove focus outlines for accessibility (optional) */
-.footer-icons a:focus {
-    outline: none; /* Removes the default focus outline */
-}
-
-/* Header navigation links */
-.navbar a {
-    text-decoration: none; /* Remove default underline */
-    color: #e0e0e0; /* Light text color for dark theme */
-    font-size: 1rem; /* Base font size */
-    transition: transform 0.3s ease, text-decoration-color 0.3s ease; /* Smooth scale and underline color changes */
-    text-decoration-color: transparent; /* Underline starts hidden */
-    display: inline-block; /* Ensures transform applies cleanly */
-}
-
-/* Style for the active page link */
-.navbar a.active {
-    transform: scale(1.3); /* Match the hover size */
-}
-
-/* Hover effect for navigation links */
-.navbar a:hover {
-    transform: scale(1.3); /* Scale text up by 20% */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar li {
-        margin: 0.5rem 0;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .blog-post h2 {
-        font-size: 1.25rem;
-    }
+    transform: scale(1.4);
+    filter: brightness(1);
 }

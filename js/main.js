@@ -1,4 +1,7 @@
 // main.js
+/* ==========================================================================
+   Generic
+   ========================================================================== */
 
 // Highlight the active page in the navbar
 document.querySelectorAll('.navbar a').forEach(link => {
@@ -22,30 +25,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Dark/Light Theme Toggle
-const themeToggleButton = document.getElementById('theme-toggle');
-if (themeToggleButton) {
-    themeToggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('light-theme');
-        // Save theme preference to localStorage
-        const isLightTheme = document.body.classList.contains('light-theme');
-        localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
-    });
-
-    // Load saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        document.body.classList.add('light-theme');
-    }
-}
-
-import { typeEffectWithCursor } from './utils.js';
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+import { typeEffectWithCursor } from './typing-effect.js';
 
 const introParagraph = document.getElementById('intro-paragraph');
 
 async function loadIntroText() {
     try {
-        const response = await fetch('data/intro-text.json'); // Adjust path if necessary
+        const response = await fetch('data/intro-text.json');
         const data = await response.json();
         const introText = data.introText;
 
@@ -59,6 +48,10 @@ async function loadIntroText() {
 // Initialize typing effect after loading the text
 window.onload = loadIntroText;
 
+/* ==========================================================================
+   Resume
+   ========================================================================== */
+
 // Animate skill bars on page load
 document.addEventListener("DOMContentLoaded", () => {
     const skillFills = document.querySelectorAll(".skill-fill");
@@ -70,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to handle intersection and trigger the slide-in animation
 function observePanels() {
-    const panels = document.querySelectorAll('.job, .education-item, .project'); // Include .project elements
+    const panels = document.querySelectorAll('.job, .education-item, .project'); // Include elements to be animated
     const observerOptions = {
-        root: null, // Use the viewport as the root
-        threshold: 0.1, // Trigger when 10% of the element is visible
+        root: null,
+        threshold: 0.1, // Visibility threshold for animation
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -92,6 +85,10 @@ function observePanels() {
 document.addEventListener('DOMContentLoaded', () => {
     observePanels();
 });
+
+/* ==========================================================================
+   About
+   ========================================================================== */
 
 // Function to animate items as they enter the viewport
 function observeAboutItems() {
@@ -128,6 +125,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const closeIcon = document.querySelector('.close-icon');
+    const navbar = document.querySelector('.navbar');
+    const body = document.body;
+
+    if (hamburger && navbar) {
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            body.style.overflow = navbar.classList.contains('show') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a link
+        navbar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('show');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                body.style.overflow = '';
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navbar.classList.contains('show') && 
+                !navbar.contains(e.target) && 
+                !hamburger.contains(e.target)) {
+                navbar.classList.remove('show');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                body.style.overflow = '';
+            }
+        });
+    }
+});
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 // Update the footer year dynamically
 const dynamicYear = document.getElementById('dynamic-year');
