@@ -122,6 +122,14 @@ a:hover {
     color: #bb86fc;
 }
 
+.intro h1, .intro p {
+    transition: color 0.3s ease;
+}
+
+.intro h1:hover, .intro p:hover {
+    color: #ffffff;
+}
+
 .intro h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -255,6 +263,11 @@ a:hover {
     filter: grayscale(100%);
 }
 
+.project a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
 .project-title {
     font-size: 1.25rem;
     margin: 0.5rem 0;
@@ -343,6 +356,52 @@ a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* PDF Container */
+.pdf-container {
+    position: relative;
+    width: 100%;
+    padding-top: 141.4%; /* Aspect ratio for A4 */
+    overflow: hidden;
+    display: none; /* Hide by default on mobile */
+}
+
+.pdf-container object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdf-mobile-view {
+    text-align: center;
+}
+
+.pdf-preview-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.pdf-download-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #bb86fc;
+    color: #121212;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 1rem 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pdf-download-button:hover {
+    transform: scale(1.05);
+    background-color: #ffffff;
+    text-decoration: none;
 }
 
 /* ==========================================================================
