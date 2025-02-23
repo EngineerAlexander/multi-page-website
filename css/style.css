@@ -268,15 +268,22 @@ a:hover {
     text-decoration: none;
 }
 
+.project a:hover {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
 .project-title {
     font-size: 1.25rem;
     margin: 0.5rem 0;
+    color: #e0e0e0;
 }
 
 .project-description {
     font-size: 1rem;
     margin: 0.5rem 0;
     line-height: 1.5;
+    color: #e0e0e0;
 }
 
 .project-link {
