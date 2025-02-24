@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme-Park-Ride</title>
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="icon" href="../../../images/favicon1.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="../../../images/favicon1.png" alt="BijanCreates Logo">
+                <span class="logo-text">BijanCreates</span>
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span class="hamburger-icon">☰</span>
+                <span class="close-icon hidden">✕</span>
+            </button>
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="../../../about.html">Journey</a></li>
+                <li><a href="../../../resume.html">Resume</a></li>
+                <li><a href="../../../projects.html" class="active">Projects</a></li>
+                <li><a href="https://www.linkedin.com/in/alexander-bijan-ardalan/" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Back Arrow -->
+        <div class="link-arrow-container">
+            <a href="/projects-meche.html" class="link-arrow" aria-label="Back to MechE Projects">
+                &#8592; Back to MechE Projects
+            </a>
+        </div>
+
+        <section class="project-page">
+
+            <!-- Image -->
+            <div class="project-page-item">
+                <img src="media/theme-park-ride.jpg" alt="Theme Park Ride" class="project-page-image">
+            </div>
+
+            <h1>Summary</h1>
+
+            <!-- Text Block -->
+            <div class="project-page-item">
+                <p class="project-page-text">
+                    My team's first place entry into a engineering design competition!
+                    The goal was to design and analyze a novel theme park ride.
+                </p>
+            </div>
+
+            <h1>Technical Report</h1>
+            
+            <div class="project-page-item">
+                <!-- Desktop PDF viewer -->
+                <div class="pdf-container">
+                    <object data="media/team10-technical.pdf" type="application/pdf">
+                        <p>It appears you don't have a PDF plugin for this browser.
+                        You can <a href="media/team10-technical.pdf">click here to download the PDF file.</a></p>
+                    </object>
+                </div>
+                
+                <!-- Mobile PDF view -->
+                <div class="pdf-mobile-view">
+                    <img src="media/team10-technical-preview.png" alt="Technical Report Preview" class="pdf-preview-image">
+                    <a href="media/team10-technical.pdf" class="pdf-download-button" download>
+                        Download PDF Report
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Back Arrow -->
+        <div class="link-arrow-container">
+            <a href="/projects-meche.html" class="link-arrow" aria-label="Back to MechE Projects">
+                &#8592; Back to MechE Projects
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/alexander-bijan-ardalan/" target="_blank">
+                <img src="../../../images/linkedin-icon.png" alt="LinkedIn" class="footer-icon">
+            </a>
+            <a href="https://github.com/EngineerAlexander" target="_blank">
+                <img src="../../../images/github-icon.png" alt="GitHub" class="footer-icon">
+            </a>
+            <a href="https://www.strava.com/athletes/132559144" target="_blank">
+                <img src="../../../images/strava-icon.png" alt="Strava" class="footer-icon">
+            </a>
+        </div>
+        <p>Designed by Bijan in California</p>
+        <p id="footer-year">Copyright <span id="dynamic-year"></span></p>
+    </footer>
+
+    <script src="../../../js/main.js" type="module"></script>
+</body>
+</html>

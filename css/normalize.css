@@ -1,0 +1,41 @@
+/* normalize.css  to ensure browser consistency */
+
+/* Document settings */
+html {
+    line-height: 1.15; /* Set default line-height */
+    text-size-adjust: 100%; /* Prevent text resizing */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Lists */
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+}
